@@ -4,7 +4,7 @@ public class Driver {
 	public static void printBook(Book[] bookArray) {
 		for(int i = 0; i < bookArray.length; i++) {
 			System.out.println("Title: " + bookArray[i].getTitle() + "\nAuthor: " + bookArray[i].getAuthor() 
-					+ "\nPublished year: " + bookArray[i].getYear() + "\nPrice: " + bookArray[i].getPrice() + "Total Price: " + bookArray[i].getTotal() + "\n");
+					+ "\nPublished year: " + bookArray[i].getYear() + "\nPrice: " + bookArray[i].getPrice() + "\nTotal Price: " + bookArray[i].getTotal() + "\n");
 		}
 	}
 	
