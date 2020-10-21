@@ -16,11 +16,13 @@ public class Driver {
 		 
 		 printBook(bookArr);
 		 
-		 bookArr[0].setName("Joen", "Lolling");
-		 bookArr[1].setName("Park", "Kuchi");
+		 bookArr[0].setFName("Joen");
+		 bookArr[0].setLName("Lulululu");
+		 bookArr[1].setFName("Park");
 		 bookArr[1].setTitle("Lovely day");
 		 bookArr[0].setYear(2001);
-		 bookArr[0].setTitle("HHHHarry PPPPoTTTTTer");
+		 bookArr[0].setTitle("HHHHarry PPPPotterrrr");
+		 
 		 System.out.println("Printing the book information after update.\n");
 		 printBook(bookArr);
 		 

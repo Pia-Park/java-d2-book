@@ -6,14 +6,15 @@ public class Book {
 	//int year 1900
 	
 	private String title;
-	private String author;
+	private String authorFName;
+	private String authorLName;
 	private int year;
 	
 	
 	public Book(String bookTitle, String fName, String lName, int publicYear) {
-		title = bookTitle;
-		author = fName + lName;
-		year = publicYear;
+//		title = bookTitle;
+//		author = fName + lName;
+//		year = publicYear;
 		
 		if(bookTitle == "" || bookTitle == null) {
 			title = "Unknown";
@@ -31,12 +32,17 @@ public class Book {
 //			author = fName + " " + lName;
 //		}
 		
-		if((fName == "" || fName == null)||(lName == "" || lName == null)) {
-			author = "Unknown";
+		if(fName == "" || fName == null) {
+			authorFName = "Unknown";
 		} else {
-			author = fName + " " + lName;
+			authorFName = fName;
 		}
 		
+		if(lName == "" || lName == null) {
+			authorLName = "Unknown";
+		} else {
+			authorLName = lName;
+		}
 		
 		if(publicYear < 1900) {
 			year = 1900;
@@ -50,18 +56,26 @@ public class Book {
 	}
 	
 	public String getAuthor() {
-		return author;
+		return authorFName + " " + authorLName;
 	}
 	
 	public int getYear() {
 		return year;
 	}
 	
-	public void setName(String fName, String lName) {
-		if((fName == "" || fName == null)||(lName == "" || lName == null)) {
-			author = "Unknown";
+	public void setFName(String fName) {
+		if(fName == "" || fName == null) {
+			authorFName = "Unknown";
 		} else {
-			author = fName + " " + lName;
+			authorFName = fName;
+		}
+	}
+	
+	public void setLName(String lName) {
+		if(lName == "" || lName == null) {
+			authorLName = "Unknown";
+		} else {
+			authorLName = lName;
 		}
 	}
 	
