@@ -9,9 +9,10 @@ public class Book {
 	private String authorFName;
 	private String authorLName;
 	private int year;
+	private double price; 
 	
 	
-	public Book(String bookTitle, String fName, String lName, int publicYear) {
+	public Book(String bookTitle, String fName, String lName, int publicYear, double price) {
 //		title = bookTitle;
 //		author = fName + lName;
 //		year = publicYear;
@@ -49,6 +50,12 @@ public class Book {
 		} else {
 			year = publicYear;
 		}
+		
+		if(price == 0) {
+			System.out.print("Unknown");
+		} else {
+			this.price = price;
+		}
 	}
 	
 	public String getTitle() {
@@ -61,6 +68,10 @@ public class Book {
 	
 	public int getYear() {
 		return year;
+	}
+	
+	public double getPrice() {
+		return price;
 	}
 	
 	public void setFName(String fName) {
@@ -95,6 +106,15 @@ public class Book {
 		}
 		
 	}
+	
+	public void setPrice(double price) {
+
+		this.price = price;
+	}
+	
+//	public double getTotal() {
+//		return this.price;
+//	}
 	
 }
 
