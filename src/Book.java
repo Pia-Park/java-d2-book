@@ -51,11 +51,9 @@ public class Book {
 			year = publicYear;
 		}
 		
-		if(price == 0) {
-			System.out.print("Unknown");
-		} else {
-			this.price = price;
-		}
+		
+		this.price = price;
+		
 	}
 	
 	public String getTitle() {
@@ -112,9 +110,10 @@ public class Book {
 		this.price = price;
 	}
 	
-//	public double getTotal() {
-//		return this.price;
-//	}
+	public int getTotal() {
+		double tax = 0.2;
+		return (int)(price + (price * tax));
+	}
 	
 }
 

@@ -4,7 +4,7 @@ public class Driver {
 	public static void printBook(Book[] bookArray) {
 		for(int i = 0; i < bookArray.length; i++) {
 			System.out.println("Title: " + bookArray[i].getTitle() + "\nAuthor: " + bookArray[i].getAuthor() 
-					+ "\nPublished year: " + bookArray[i].getYear() + "\nPrice: " + bookArray[i].getPrice() + "\n");
+					+ "\nPublished year: " + bookArray[i].getYear() + "\nPrice: " + bookArray[i].getPrice() + "Total Price: " + bookArray[i].getTotal() + "\n");
 		}
 	}
 	
@@ -12,7 +12,7 @@ public class Driver {
 		double total = 0;
 
 		for(int i = 0; i < bookArray.length; i++) {
-			total += bookArray[i].getPrice();
+			total += bookArray[i].getTotal();
 		}
 		System.out.println("Total price: " + total);
 	}
@@ -32,17 +32,13 @@ public class Driver {
 		 bookArr[1].setTitle("Lovely day");
 		 bookArr[0].setYear(2001);
 		 bookArr[0].setTitle("HHHHarry PPPPotterrrr");
+		 bookArr[0].setPrice(300);
+		 bookArr[1].setPrice(100);
 		 
 		 System.out.println("Printing the book information after update.\n");
 		 printBook(bookArr);
 		 
-		 bookArr[0].setPrice(300);
-		 bookArr[1].setPrice(100);
-		 
-		 System.out.println("Printing the book information after adding price.\n");
-		 printBook(bookArr);
-		 
-		 
+		 		 
 		 System.out.println("Printing All books Total price.");
 		 printTotalPrice(bookArr);
 		 
