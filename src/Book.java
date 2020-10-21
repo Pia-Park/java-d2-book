@@ -20,15 +20,24 @@ public class Book {
 		} else {
 			title = bookTitle;
 		}
-		if((fName == "" || fName == null)&&(lName == "" || lName == null)) {
-			fName = "Unknown";
-			lName = "Unknown";
-			author = fName + " " + lName;
-		}else if(lName == "" || lName == null) {
-			lName = "Unknown";
+		
+//		if((fName == "" || fName == null)&&(lName == "" || lName == null)) {
+//			fName = "Unknown";
+//			lName = "Unknown";
+//			author = fName + " " + lName;
+//		}else if(lName == "" || lName == null) {
+//			lName = "Unknown";
+//		} else {
+//			author = fName + " " + lName;
+//		}
+		
+		if((fName == "" || fName == null)||(lName == "" || lName == null)) {
+			author = "Unknown";
 		} else {
 			author = fName + " " + lName;
 		}
+		
+		
 		if(publicYear < 1900) {
 			year = 1900;
 		} else {
@@ -48,6 +57,30 @@ public class Book {
 		return year;
 	}
 	
+	public void setName(String fName, String lName) {
+		if((fName == "" || fName == null)||(lName == "" || lName == null)) {
+			author = "Unknown";
+		} else {
+			author = fName + " " + lName;
+		}
+	}
+	
+	public void setTitle(String bookTitle) {
+		if(bookTitle == "" || bookTitle == null) {
+			title = "Unknown";
+		} else {
+			title = bookTitle;
+		}
+	}
+	
+	public void setYear(int publicYear) {
+		if(publicYear < 1900) {
+			year = 1900;
+		} else {
+			year = publicYear;
+		}
+		
+	}
 	
 }
 
